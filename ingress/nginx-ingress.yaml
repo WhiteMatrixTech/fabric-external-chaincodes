@@ -27,5 +27,5 @@ spec:
           servicePort: 7051
       - path: /ca/org2
         backend:
-        serviceName: ca-org2
-        servicePort: 7054
+          serviceName: ca-org2
+          servicePort: 7054
