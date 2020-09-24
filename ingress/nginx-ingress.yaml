@@ -1,0 +1,31 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: nginx-ingress
+  namespace: hyperledger
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /peer0/org1
+        backend:
+          serviceName: peer0-org1
+          servicePort: 7051
+      - path: /orderer0
+        backend:
+          serviceName: orderer0
+          servicePort: 7050
+      - path: /ca/org1
+        backend:
+          serviceName: ca-org1
+          servicePort: 7054
+      - path: /peer0/org2
+        backend:
+          serviceName: peer0-org2
+          servicePort: 7051
+      - path: /ca/org2
+        backend:
+        serviceName: ca-org2
+        servicePort: 7054
