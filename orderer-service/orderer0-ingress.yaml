@@ -9,10 +9,6 @@ metadata:
     # use the shared ingress-nginx
     kubernetes.io/ingress.class: "nginx"
 spec:
-  rules:
-    - http:
-        paths:
-          - path: /
-            backend:
-              serviceName: orderer0
-              servicePort: 7050
+  backend:
+    serviceName: orderer0
+    servicePort: 7050
