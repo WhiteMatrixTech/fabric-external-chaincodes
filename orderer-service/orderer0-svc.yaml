@@ -7,7 +7,7 @@ metadata:
   name: orderer0
   namespace: hyperledger
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   ports:
     - name: "orderer"
       port: 7050
@@ -25,7 +25,7 @@ metadata:
   name: orderer0-metrics
   namespace: hyperledger
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   ports:
     - name: "orderer-metrics"
       port: 8443
