@@ -31,3 +31,11 @@ spec:
         backend:
           serviceName: ca-org2
           servicePort: 7054
+      - path: /orderer1
+        backend:
+          serviceName: orderer1
+          servicePort: 7050
+      - path: /orderer2
+        backend:
+          serviceName: orderer2
+          servicePort: 7050
