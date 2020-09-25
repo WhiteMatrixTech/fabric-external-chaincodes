@@ -1,14 +1,15 @@
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: nginx-ingress
+  name: ingress-fabric
   namespace: hyperledger
   annotations:
     # use the shared ingress-nginx
     kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
-  - http:
+  - host: example.whitematrix.org
+    http:
       paths:
       - path: /peer0/org1
         backend:
